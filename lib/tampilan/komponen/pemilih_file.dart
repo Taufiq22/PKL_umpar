@@ -130,7 +130,7 @@ class _PemilihFileState extends State<PemilihFile> {
                 Icon(
                   Icons.cloud_upload_outlined,
                   size: 48,
-                  color: WarnaAplikasi.primary.withOpacity(0.5),
+                  color: WarnaAplikasi.primary.withValues(alpha: 0.5),
                 ),
                 const SizedBox(height: 8),
                 Text(
@@ -184,7 +184,7 @@ class _PemilihFileState extends State<PemilihFile> {
           width: 48,
           height: 48,
           decoration: BoxDecoration(
-            color: _getFileColor(extension).withOpacity(0.1),
+            color: _getFileColor(extension).withValues(alpha: 0.1),
             borderRadius: BorderRadius.circular(8),
           ),
           child: isImage

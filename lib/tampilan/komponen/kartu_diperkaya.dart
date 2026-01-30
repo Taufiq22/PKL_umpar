@@ -44,7 +44,7 @@ class KartuGradien extends StatelessWidget {
             ),
             boxShadow: [
               BoxShadow(
-                color: warna.first.withOpacity(0.3),
+                color: warna.first.withValues(alpha: 0.3),
                 blurRadius: 12,
                 offset: const Offset(0, 6),
               ),
@@ -85,14 +85,14 @@ class KartuKaca extends StatelessWidget {
           padding: padding ?? const EdgeInsets.all(16),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(radius),
-            color: (warnaLatar ?? Colors.white).withOpacity(0.8),
+            color: (warnaLatar ?? Colors.white).withValues(alpha: 0.8),
             border: Border.all(
-              color: Colors.white.withOpacity(0.2),
+              color: Colors.white.withValues(alpha: 0.2),
               width: 1.5,
             ),
             boxShadow: [
               BoxShadow(
-                color: Colors.black.withOpacity(0.05),
+                color: Colors.black.withValues(alpha: 0.05),
                 blurRadius: 10,
                 offset: const Offset(0, 4),
               ),
@@ -147,7 +147,7 @@ class KartuStatus extends StatelessWidget {
               Container(
                 padding: const EdgeInsets.all(10),
                 decoration: BoxDecoration(
-                  color: warnaStatus.withOpacity(0.1),
+                  color: warnaStatus.withValues(alpha: 0.1),
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: Icon(ikon, color: warnaStatus, size: 24),
@@ -184,7 +184,7 @@ class KartuStatus extends StatelessWidget {
                   padding:
                       const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                   decoration: BoxDecoration(
-                    color: warnaStatus.withOpacity(0.1),
+                    color: warnaStatus.withValues(alpha: 0.1),
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: Text(
@@ -356,7 +356,7 @@ class KartuAksiCepat extends StatelessWidget {
               Container(
                 padding: const EdgeInsets.all(12),
                 decoration: BoxDecoration(
-                  color: warna.withOpacity(0.1),
+                  color: warna.withValues(alpha: 0.1),
                   shape: BoxShape.circle,
                 ),
                 child: Icon(ikon, color: warna, size: 28),
@@ -418,7 +418,7 @@ class KartuNotifikasi extends StatelessWidget {
               Container(
                 padding: const EdgeInsets.all(10),
                 decoration: BoxDecoration(
-                  color: (warnaIkon ?? WarnaAplikasi.primary).withOpacity(0.1),
+                  color: (warnaIkon ?? WarnaAplikasi.primary).withValues(alpha: 0.1),
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: Icon(

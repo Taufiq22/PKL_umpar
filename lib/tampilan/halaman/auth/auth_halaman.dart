@@ -133,7 +133,7 @@ class _AuthHalamanState extends State<AuthHalaman>
           borderRadius: BorderRadius.circular(UkuranAplikasi.radiusKecil),
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(0.05),
+              color: Colors.black.withValues(alpha: 0.05),
               blurRadius: 4,
               offset: const Offset(0, 2),
             ),
@@ -442,7 +442,8 @@ class _RegisterFormState extends State<_RegisterForm> {
             _buildLabeledField(
               label: 'Daftar Sebagai',
               child: DropdownButtonFormField<RolePengguna>(
-                value: _selectedRole,
+                key: ValueKey(_selectedRole),
+                initialValue: _selectedRole,
                 decoration: const InputDecoration(),
                 items: RolePengguna.values
                     .where((r) =>
