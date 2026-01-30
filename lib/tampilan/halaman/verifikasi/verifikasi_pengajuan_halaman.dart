@@ -140,8 +140,8 @@ class _VerifikasiPengajuanHalamanState
                         const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                     decoration: BoxDecoration(
                       color: pengajuan.jenisPengajuan == JenisPengajuan.magang
-                          ? WarnaAplikasi.primary.withOpacity(0.1)
-                          : WarnaAplikasi.success.withOpacity(0.1),
+                          ? WarnaAplikasi.primary.withValues(alpha: 0.1)
+                          : WarnaAplikasi.success.withValues(alpha: 0.1),
                       borderRadius: BorderRadius.circular(4),
                     ),
                     child: Text(
@@ -236,7 +236,7 @@ class _VerifikasiPengajuanHalamanState
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
       decoration: BoxDecoration(
-        color: status.warna.withOpacity(0.1),
+        color: status.warna.withValues(alpha: 0.1),
         borderRadius: BorderRadius.circular(12),
       ),
       child: Text(
@@ -265,7 +265,8 @@ class _VerifikasiPengajuanHalamanState
           mainAxisSize: MainAxisSize.min,
           children: [
             DropdownButtonFormField<String>(
-              value: _filterStatus,
+              key: ValueKey(_filterStatus),
+              initialValue: _filterStatus,
               decoration: const InputDecoration(labelText: 'Status'),
               items: ['Semua', 'Diajukan', 'Disetujui', 'Ditolak', 'Selesai']
                   .map((s) => DropdownMenuItem(value: s, child: Text(s)))
@@ -274,7 +275,8 @@ class _VerifikasiPengajuanHalamanState
             ),
             const SizedBox(height: 16),
             DropdownButtonFormField<String>(
-              value: _filterJenis,
+              key: ValueKey(_filterJenis),
+              initialValue: _filterJenis,
               decoration: const InputDecoration(labelText: 'Jenis'),
               items: ['Semua', 'Magang', 'PKL']
                   .map((s) => DropdownMenuItem(value: s, child: Text(s)))
@@ -404,7 +406,8 @@ class _VerifikasiPengajuanHalamanState
                       }
 
                       return DropdownButtonFormField<int>(
-                        value: selectedPembimbingId,
+                        key: ValueKey(selectedPembimbingId),
+                        initialValue: selectedPembimbingId,
                         decoration: const InputDecoration(
                           hintText: 'Pilih Pembimbing',
                           border: OutlineInputBorder(),

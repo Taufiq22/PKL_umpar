@@ -101,7 +101,7 @@ class _InputKehadiranHalamanState extends State<InputKehadiranHalaman> {
                           padding: const EdgeInsets.all(16),
                           decoration: BoxDecoration(
                             color: isSelected
-                                ? status.color.withOpacity(0.1)
+                                ? status.color.withValues(alpha: 0.1)
                                 : Colors.grey[50],
                             border: Border.all(
                               color:

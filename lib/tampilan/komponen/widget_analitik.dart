@@ -239,7 +239,7 @@ class ChartBarHorizontal extends StatelessWidget {
                           child: LinearProgressIndicator(
                             value: e.value / maxValue,
                             minHeight: 8,
-                            backgroundColor: warnaPrimary.withOpacity(0.1),
+                            backgroundColor: warnaPrimary.withValues(alpha: 0.1),
                             valueColor: AlwaysStoppedAnimation(warnaPrimary),
                           ),
                         ),
@@ -284,7 +284,7 @@ class KartuStatistik extends StatelessWidget {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(16),
           gradient: LinearGradient(
-            colors: [warna, warna.withOpacity(0.8)],
+            colors: [warna, warna.withValues(alpha: 0.8)],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
           ),
@@ -298,7 +298,7 @@ class KartuStatistik extends StatelessWidget {
                 Container(
                   padding: const EdgeInsets.all(10),
                   decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(0.2),
+                    color: Colors.white.withValues(alpha: 0.2),
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: Icon(ikon, color: Colors.white, size: 24),
@@ -308,7 +308,7 @@ class KartuStatistik extends StatelessWidget {
                     padding:
                         const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                     decoration: BoxDecoration(
-                      color: Colors.white.withOpacity(0.2),
+                      color: Colors.white.withValues(alpha: 0.2),
                       borderRadius: BorderRadius.circular(12),
                     ),
                     child: Row(
@@ -346,7 +346,7 @@ class KartuStatistik extends StatelessWidget {
             Text(
               judul,
               style: TextStyle(
-                color: Colors.white.withOpacity(0.9),
+                color: Colors.white.withValues(alpha: 0.9),
                 fontSize: 14,
               ),
             ),
@@ -355,7 +355,7 @@ class KartuStatistik extends StatelessWidget {
               Text(
                 subJudul!,
                 style: TextStyle(
-                  color: Colors.white.withOpacity(0.7),
+                  color: Colors.white.withValues(alpha: 0.7),
                   fontSize: 12,
                 ),
               ),
@@ -430,7 +430,7 @@ class ProgressMingguan extends StatelessWidget {
                         width: 28,
                         height: tinggi.clamp(4.0, 80.0),
                         decoration: BoxDecoration(
-                          color: isHariIni ? warna : warna.withOpacity(0.3),
+                          color: isHariIni ? warna : warna.withValues(alpha: 0.3),
                           borderRadius: BorderRadius.circular(4),
                         ),
                       ),
@@ -487,7 +487,7 @@ class RingProgress extends StatelessWidget {
                 child: CircularProgressIndicator(
                   value: persentase / 100,
                   strokeWidth: 10,
-                  backgroundColor: warna.withOpacity(0.1),
+                  backgroundColor: warna.withValues(alpha: 0.1),
                   valueColor: AlwaysStoppedAnimation(warna),
                 ),
               ),

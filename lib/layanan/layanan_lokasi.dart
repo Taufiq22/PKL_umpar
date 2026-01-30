@@ -55,8 +55,10 @@ class LayananLokasi {
 
       // Ambil posisi
       final position = await Geolocator.getCurrentPosition(
-        desiredAccuracy: LocationAccuracy.high,
-        timeLimit: Duration(seconds: timeoutDetik),
+        locationSettings: LocationSettings(
+          accuracy: LocationAccuracy.high,
+          timeLimit: Duration(seconds: timeoutDetik),
+        ),
       );
 
       debugPrint('Lokasi: ${position.latitude}, ${position.longitude}');
