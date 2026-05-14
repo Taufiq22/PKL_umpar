@@ -181,7 +181,7 @@ class _BimbinganEnhancedHalamanState extends State<BimbinganEnhancedHalaman>
                   Container(
                     padding: const EdgeInsets.all(10),
                     decoration: BoxDecoration(
-                      color: bimbingan.statusBimbingan.color.withOpacity(0.1),
+                      color: bimbingan.statusBimbingan.color.withValues(alpha: 0.1),
                       borderRadius: BorderRadius.circular(10),
                     ),
                     child: Icon(
@@ -221,7 +221,7 @@ class _BimbinganEnhancedHalamanState extends State<BimbinganEnhancedHalaman>
                     padding:
                         const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                     decoration: BoxDecoration(
-                      color: bimbingan.statusBimbingan.color.withOpacity(0.1),
+                      color: bimbingan.statusBimbingan.color.withValues(alpha: 0.1),
                       borderRadius: BorderRadius.circular(12),
                     ),
                     child: Text(
@@ -367,7 +367,7 @@ class _BimbinganEnhancedHalamanState extends State<BimbinganEnhancedHalaman>
                     padding:
                         const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                     decoration: BoxDecoration(
-                      color: bimbingan.statusBimbingan.color.withOpacity(0.1),
+                      color: bimbingan.statusBimbingan.color.withValues(alpha: 0.1),
                       borderRadius: BorderRadius.circular(20),
                     ),
                     child: Row(
@@ -439,7 +439,7 @@ class _BimbinganEnhancedHalamanState extends State<BimbinganEnhancedHalaman>
                     Container(
                       padding: const EdgeInsets.all(12),
                       decoration: BoxDecoration(
-                        color: Colors.green.withOpacity(0.1),
+                        color: Colors.green.withValues(alpha: 0.1),
                         borderRadius: BorderRadius.circular(8),
                       ),
                       child: Text(bimbingan.feedbackPembimbing!),

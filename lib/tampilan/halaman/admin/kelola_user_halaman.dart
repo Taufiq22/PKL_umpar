@@ -175,7 +175,7 @@ class _KelolaUserHalamanState extends State<KelolaUserHalaman> {
       child: ListTile(
         contentPadding: const EdgeInsets.all(12),
         leading: CircleAvatar(
-          backgroundColor: _getRoleColor(user.role).withOpacity(0.1),
+          backgroundColor: _getRoleColor(user.role).withValues(alpha: 0.1),
           child: Text(
             user.namaLengkap.isNotEmpty
                 ? user.namaLengkap[0].toUpperCase()
@@ -253,7 +253,7 @@ class _KelolaUserHalamanState extends State<KelolaUserHalaman> {
       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
       decoration: BoxDecoration(
         color: (isActive ? WarnaAplikasi.success : WarnaAplikasi.error)
-            .withOpacity(0.1),
+            .withValues(alpha: 0.1),
         borderRadius: BorderRadius.circular(12),
       ),
       child: Text(
@@ -271,7 +271,7 @@ class _KelolaUserHalamanState extends State<KelolaUserHalaman> {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
       decoration: BoxDecoration(
-        color: _getRoleColor(role).withOpacity(0.1),
+        color: _getRoleColor(role).withValues(alpha: 0.1),
         borderRadius: BorderRadius.circular(4),
       ),
       child: Text(
@@ -312,7 +312,7 @@ class _KelolaUserHalamanState extends State<KelolaUserHalaman> {
       builder: (context) => AlertDialog(
         title: const Text('Filter Pengguna'),
         content: DropdownButtonFormField<String>(
-          value: _filterRole,
+          initialValue: _filterRole,
           decoration: const InputDecoration(labelText: 'Role'),
           items: [
             'Semua',
@@ -508,7 +508,8 @@ class _KelolaUserHalamanState extends State<KelolaUserHalaman> {
                     ),
                     const SizedBox(height: 12),
                     DropdownButtonFormField<RolePengguna>(
-                      value: selectedRole,
+                      key: ValueKey(selectedRole),
+                      initialValue: selectedRole,
                       decoration: const InputDecoration(labelText: 'Role'),
                       items: RolePengguna.values
                           .map((r) =>
@@ -638,7 +639,8 @@ class _KelolaUserHalamanState extends State<KelolaUserHalaman> {
                   ),
                   const SizedBox(height: 12),
                   DropdownButtonFormField<RolePengguna>(
-                    value: selectedRole,
+                    key: ValueKey(selectedRole),
+                    initialValue: selectedRole,
                     decoration: const InputDecoration(labelText: 'Role'),
                     items: RolePengguna.values
                         .map((r) => DropdownMenuItem(

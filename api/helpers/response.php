@@ -20,9 +20,15 @@ function successResponse($arg1, $arg2 = null, $meta = null) {
     $message = null;
     
     // SMART DETECTION LOGIC
+
+    // Case 0: First arg is Null AND Second arg is String -> Pattern ($data=null, $message)
+    if ($arg1 === null && is_string($arg2)) {
+        $data = null;
+        $message = $arg2;
+    }
     // Case 1: First arg is Array/Object AND Second arg is String -> Pattern ($data, $message)
     // Used by: BimbinganController, KehadiranController
-    if ((is_array($arg1) || is_object($arg1)) && is_string($arg2)) {
+    else if ((is_array($arg1) || is_object($arg1)) && is_string($arg2)) {
         $data = $arg1;
         $message = $arg2;
     }

@@ -103,7 +103,8 @@ class InputDropdown<T> extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DropdownButtonFormField<T>(
-      value: value,
+      key: ValueKey(value),
+      initialValue: value,
       items: items,
       onChanged: onChanged,
       validator: validator,
@@ -374,7 +375,7 @@ class InputChipPilihan<T> extends StatelessWidget {
         return ChoiceChip(
           label: Text(labelBuilder(option)),
           selected: isSelected,
-          selectedColor: WarnaAplikasi.primary.withOpacity(0.2),
+          selectedColor: WarnaAplikasi.primary.withValues(alpha: 0.2),
           labelStyle: TextStyle(
             color: isSelected ? WarnaAplikasi.primary : Colors.grey[700],
             fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,

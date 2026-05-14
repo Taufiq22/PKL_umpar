@@ -106,7 +106,7 @@ class _AdminSekolahBerandaState extends State<AdminSekolahBeranda> {
         children: [
           CircleAvatar(
             radius: 30,
-            backgroundColor: Colors.white.withOpacity(0.2),
+            backgroundColor: Colors.white.withValues(alpha: 0.2),
             child: Text(
               profil?.initials ?? '?',
               style: const TextStyle(
@@ -133,7 +133,7 @@ class _AdminSekolahBerandaState extends State<AdminSekolahBeranda> {
                 Text(
                   profil?.namaSekolah ?? 'Sekolah',
                   style: TextStyle(
-                    color: Colors.white.withOpacity(0.9),
+                    color: Colors.white.withValues(alpha: 0.9),
                     fontSize: 14,
                   ),
                 ),
@@ -141,7 +141,7 @@ class _AdminSekolahBerandaState extends State<AdminSekolahBeranda> {
                   Text(
                     profil!.jabatan!,
                     style: TextStyle(
-                      color: Colors.white.withOpacity(0.8),
+                      color: Colors.white.withValues(alpha: 0.8),
                       fontSize: 12,
                     ),
                   ),
@@ -151,7 +151,7 @@ class _AdminSekolahBerandaState extends State<AdminSekolahBeranda> {
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
             decoration: BoxDecoration(
-              color: Colors.white.withOpacity(0.2),
+              color: Colors.white.withValues(alpha: 0.2),
               borderRadius: BorderRadius.circular(12),
             ),
             child: Text(
@@ -173,7 +173,7 @@ class _AdminSekolahBerandaState extends State<AdminSekolahBeranda> {
         borderRadius: BorderRadius.circular(12),
         boxShadow: [
           BoxShadow(
-            color: Colors.grey.withOpacity(0.1),
+            color: Colors.grey.withValues(alpha: 0.1),
             blurRadius: 10,
             offset: const Offset(0, 4),
           ),
@@ -219,7 +219,7 @@ class _AdminSekolahBerandaState extends State<AdminSekolahBeranda> {
           width: 56,
           height: 56,
           decoration: BoxDecoration(
-            color: color.withOpacity(0.1),
+            color: color.withValues(alpha: 0.1),
             shape: BoxShape.circle,
           ),
           child: Center(
@@ -312,7 +312,7 @@ class _AdminSekolahBerandaState extends State<AdminSekolahBeranda> {
                   Container(
                     padding: const EdgeInsets.all(12),
                     decoration: BoxDecoration(
-                      color: Colors.teal.withOpacity(0.1),
+                      color: Colors.teal.withValues(alpha: 0.1),
                       shape: BoxShape.circle,
                     ),
                     child: Icon(
@@ -391,7 +391,7 @@ class _AdminSekolahBerandaState extends State<AdminSekolahBeranda> {
       margin: const EdgeInsets.only(bottom: 8),
       child: ListTile(
         leading: CircleAvatar(
-          backgroundColor: statusColor.withOpacity(0.1),
+          backgroundColor: statusColor.withValues(alpha: 0.1),
           child: Text(
             (pengajuan.namaSiswa ?? 'S')[0].toUpperCase(),
             style: TextStyle(color: statusColor),
@@ -402,7 +402,7 @@ class _AdminSekolahBerandaState extends State<AdminSekolahBeranda> {
         trailing: Container(
           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
           decoration: BoxDecoration(
-            color: statusColor.withOpacity(0.1),
+            color: statusColor.withValues(alpha: 0.1),
             borderRadius: BorderRadius.circular(12),
           ),
           child: Text(

@@ -106,7 +106,7 @@ class _AdminFakultasBerandaState extends State<AdminFakultasBeranda> {
         children: [
           CircleAvatar(
             radius: 30,
-            backgroundColor: Colors.white.withOpacity(0.2),
+            backgroundColor: Colors.white.withValues(alpha: 0.2),
             child: Text(
               profil?.initials ?? '?',
               style: const TextStyle(
@@ -133,7 +133,7 @@ class _AdminFakultasBerandaState extends State<AdminFakultasBeranda> {
                 Text(
                   profil?.fakultas ?? 'Fakultas',
                   style: TextStyle(
-                    color: Colors.white.withOpacity(0.9),
+                    color: Colors.white.withValues(alpha: 0.9),
                     fontSize: 14,
                   ),
                 ),
@@ -141,7 +141,7 @@ class _AdminFakultasBerandaState extends State<AdminFakultasBeranda> {
                   Text(
                     profil!.jabatan!,
                     style: TextStyle(
-                      color: Colors.white.withOpacity(0.8),
+                      color: Colors.white.withValues(alpha: 0.8),
                       fontSize: 12,
                     ),
                   ),
@@ -162,7 +162,7 @@ class _AdminFakultasBerandaState extends State<AdminFakultasBeranda> {
         borderRadius: BorderRadius.circular(12),
         boxShadow: [
           BoxShadow(
-            color: Colors.grey.withOpacity(0.1),
+            color: Colors.grey.withValues(alpha: 0.1),
             blurRadius: 10,
             offset: const Offset(0, 4),
           ),
@@ -208,7 +208,7 @@ class _AdminFakultasBerandaState extends State<AdminFakultasBeranda> {
           width: 56,
           height: 56,
           decoration: BoxDecoration(
-            color: color.withOpacity(0.1),
+            color: color.withValues(alpha: 0.1),
             shape: BoxShape.circle,
           ),
           child: Center(
@@ -301,7 +301,7 @@ class _AdminFakultasBerandaState extends State<AdminFakultasBeranda> {
                   Container(
                     padding: const EdgeInsets.all(12),
                     decoration: BoxDecoration(
-                      color: WarnaAplikasi.primary.withOpacity(0.1),
+                      color: WarnaAplikasi.primary.withValues(alpha: 0.1),
                       shape: BoxShape.circle,
                     ),
                     child: Icon(
@@ -380,7 +380,7 @@ class _AdminFakultasBerandaState extends State<AdminFakultasBeranda> {
       margin: const EdgeInsets.only(bottom: 8),
       child: ListTile(
         leading: CircleAvatar(
-          backgroundColor: statusColor.withOpacity(0.1),
+          backgroundColor: statusColor.withValues(alpha: 0.1),
           child: Text(
             (pengajuan.namaMahasiswa ?? 'M')[0].toUpperCase(),
             style: TextStyle(color: statusColor),
@@ -391,7 +391,7 @@ class _AdminFakultasBerandaState extends State<AdminFakultasBeranda> {
         trailing: Container(
           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
           decoration: BoxDecoration(
-            color: statusColor.withOpacity(0.1),
+            color: statusColor.withValues(alpha: 0.1),
             borderRadius: BorderRadius.circular(12),
           ),
           child: Text(

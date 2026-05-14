@@ -174,7 +174,7 @@ class _KehadiranHalamanState extends State<KehadiranHalaman> {
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: WarnaAplikasi.primary.withOpacity(0.3),
+            color: WarnaAplikasi.primary.withValues(alpha: 0.3),
             blurRadius: 10,
             offset: const Offset(0, 4),
           ),
@@ -200,7 +200,7 @@ class _KehadiranHalamanState extends State<KehadiranHalaman> {
                 padding:
                     const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                 decoration: BoxDecoration(
-                  color: Colors.white.withOpacity(0.2),
+                  color: Colors.white.withValues(alpha: 0.2),
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: Text(
@@ -230,7 +230,7 @@ class _KehadiranHalamanState extends State<KehadiranHalaman> {
             child: LinearProgressIndicator(
               value: stats.persentaseHadir / 100,
               minHeight: 8,
-              backgroundColor: Colors.white.withOpacity(0.3),
+              backgroundColor: Colors.white.withValues(alpha: 0.3),
               valueColor: const AlwaysStoppedAnimation<Color>(Colors.white),
             ),
           ),
@@ -246,7 +246,7 @@ class _KehadiranHalamanState extends State<KehadiranHalaman> {
           width: 48,
           height: 48,
           decoration: BoxDecoration(
-            color: Colors.white.withOpacity(0.2),
+            color: Colors.white.withValues(alpha: 0.2),
             shape: BoxShape.circle,
           ),
           child: Center(
@@ -264,7 +264,7 @@ class _KehadiranHalamanState extends State<KehadiranHalaman> {
         Text(
           label,
           style: TextStyle(
-            color: Colors.white.withOpacity(0.9),
+            color: Colors.white.withValues(alpha: 0.9),
             fontSize: 12,
           ),
         ),
@@ -277,16 +277,16 @@ class _KehadiranHalamanState extends State<KehadiranHalaman> {
       margin: const EdgeInsets.symmetric(horizontal: 16),
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: Colors.green.withOpacity(0.1),
+        color: Colors.green.withValues(alpha: 0.1),
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: Colors.green.withOpacity(0.3)),
+        border: Border.all(color: Colors.green.withValues(alpha: 0.3)),
       ),
       child: Row(
         children: [
           Container(
             padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(
-              color: Colors.green.withOpacity(0.2),
+              color: Colors.green.withValues(alpha: 0.2),
               shape: BoxShape.circle,
             ),
             child: const Icon(Icons.fingerprint, color: Colors.green, size: 32),
@@ -358,7 +358,7 @@ class _KehadiranHalamanState extends State<KehadiranHalaman> {
           _filterStatus = selected ? status : null;
         });
       },
-      selectedColor: color.withOpacity(0.2),
+      selectedColor: color.withValues(alpha: 0.2),
       checkmarkColor: color,
       labelStyle: TextStyle(
         color: isSelected ? color : Colors.grey[700],
@@ -384,7 +384,7 @@ class _KehadiranHalamanState extends State<KehadiranHalaman> {
                 width: 56,
                 height: 56,
                 decoration: BoxDecoration(
-                  color: kehadiran.statusKehadiran.color.withOpacity(0.1),
+                  color: kehadiran.statusKehadiran.color.withValues(alpha: 0.1),
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: Column(
@@ -437,7 +437,7 @@ class _KehadiranHalamanState extends State<KehadiranHalaman> {
                               vertical: 2,
                             ),
                             decoration: BoxDecoration(
-                              color: WarnaAplikasi.primary.withOpacity(0.1),
+                              color: WarnaAplikasi.primary.withValues(alpha: 0.1),
                               borderRadius: BorderRadius.circular(10),
                             ),
                             child: Text(
@@ -695,7 +695,7 @@ class _KehadiranHalamanState extends State<KehadiranHalaman> {
                   Container(
                     padding: const EdgeInsets.all(12),
                     decoration: BoxDecoration(
-                      color: kehadiran.statusKehadiran.color.withOpacity(0.1),
+                      color: kehadiran.statusKehadiran.color.withValues(alpha: 0.1),
                       shape: BoxShape.circle,
                     ),
                     child: Icon(
